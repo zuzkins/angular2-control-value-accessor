@@ -1,0 +1,20 @@
+name: actrl
+description: angular2 control value accessor test
+version: 0.0.1
+environment:
+  sdk: '>=1.13.0 <2.0.0'
+
+dependencies:
+  angular2: 2.0.0-beta.22
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+transformers:
+- angular2:
+    platform_directives:
+    - 'package:angular2/common.dart#COMMON_DIRECTIVES'
+    - 'package:angular2/common.dart#CORE_DIRECTIVES'
+    - 'package:angular2/common.dart#FORM_DIRECTIVES'
+    - 'package:angular2/router.dart#ROUTER_DIRECTIVES'
+    - 'package:actrl/all.dart#COMPONENTS'
+    entry_points: web/actrl.dart
+- dart_to_js_script_rewriter
